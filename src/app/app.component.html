@@ -1,3 +1,23 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Angles calculator
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <app-input-form (formSubmit)="handleSubmit($event)"></app-input-form>
+
+  <div *ngIf="anglesSum !== undefined">
+    <p>The sum (degrees) of angles is: {{ anglesSum!.degrees }}</p>
+    <p>The sum (minutes) of angles is: {{ anglesSum!.minutes }}</p>
+    <p>The sum (seconds) of angles is: {{ anglesSum!.seconds }}</p>
+  </div>
+
+  <div *ngIf="anglesSubtraction !== undefined">
+    <p>The subtraction (degrees) of angles is: {{ anglesSum!.degrees }}</p>
+    <p>The subtraction (minutes) of angles is: {{ anglesSum!.minutes }}</p>
+    <p>The subtraction (seconds) of angles is: {{ anglesSum!.seconds }}</p>
+  </div>
+</ion-content>

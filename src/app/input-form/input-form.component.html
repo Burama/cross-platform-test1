@@ -1,0 +1,28 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <ion-item>
+    <ion-label position="floating">First value in degrees</ion-label>
+    <ion-input formControlName="degrees1" type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">First value in minutes</ion-label>
+    <ion-input formControlName="minutes1" type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">First value in seconds</ion-label>
+    <ion-input formControlName="seconds1" type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Second value in degrees</ion-label>
+    <ion-input formControlName="degrees2" type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Second value in minutes</ion-label>
+    <ion-input formControlName="minutes2" type="number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Second value in seconds</ion-label>
+    <ion-input formControlName="seconds2" type="number"></ion-input>
+  </ion-item>
+  
+  <ion-button type="submit" expand="block" [disabled]="!form.valid">Submit</ion-button>
+</form>
